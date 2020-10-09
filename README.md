@@ -7,13 +7,12 @@ Axway Titanium Hyperloop module for GooglePay
 ## Installation
 
 1. Enable `hyperloop` module in `tiapp.xml`
-2. Copy `ti.googlepay.js` into `app/lib` foder.
+2. Copy `ti.googlepay.js` into `app/lib` folder.
 3. Add dependency in `app/platform/android/gradle.build`
     ```
     dependencies {
         implementation 'com.google.android.gms:play-services-wallet:18.0.0'
     }
-
     ```
 4. If you want use `Pay with GPay` button, copy [assets](https://developers.google.com/pay/api/download-assets/android/Google-Pay-Payment-Buttons.zip) from [brand guideline page](https://developers.google.com/pay/api/android/guides/brand-guidelines?hl=en) into `app/platform/android/res`
 
