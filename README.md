@@ -1,6 +1,6 @@
 # ti.googlepay
 
-<img src="https://pay.google.com/about/static_kcs/images/logos/google-pay-logo.svg" width=180/>
+<img src="https://pay.google.com/about/static_kcs/images/logos/google-pay-logo.svg" width=100/>
 
 Axway Titanium Hyperloop module for GooglePay
 
