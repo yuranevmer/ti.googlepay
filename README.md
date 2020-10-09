@@ -24,8 +24,8 @@ Axway Titanium Hyperloop module for GooglePay
 
 - `createPaymentsClient`(options, callback) - returns
 `paymentClient`
-    - options:
-        
+    - options
+
         enviorment: `ENVIRONMENT_TEST`, `ENVIRONMENT_PROD`
 
         enviorment: `THEME_LIGHT`, `THEME_DARK`
@@ -40,7 +40,7 @@ Axway Titanium Hyperloop module for GooglePay
     ```
 
 `paymentClient` methods:
-- `IsReadyToPay`(options, callback)
+- `isReadyToPay`(options, callback)
 
     - options - [isReadyToPayRequest](https://developers.google.com/pay/api/android/reference/request-objects?hl=ru#IsReadyToPayRequest)
 
@@ -57,6 +57,7 @@ Axway Titanium Hyperloop module for GooglePay
 - `makePayment`(options, callback)
     
     - options - [paymentDataRequest](https://developers.google.com/pay/api/android/reference/request-objects?hl=ru#PaymentDataRequest)
+
     ```js
     gpay.makePayment({
         apiVersion: 2,
