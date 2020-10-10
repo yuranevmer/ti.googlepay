@@ -14,21 +14,23 @@ Axway Titanium Hyperloop module for GooglePay
         implementation 'com.google.android.gms:play-services-wallet:18.0.0'
     }
     ```
-4. If you want use `Pay with GPay` button, copy [assets](https://developers.google.com/pay/api/download-assets/android/Google-Pay-Payment-Buttons.zip) from [brand guideline page](https://developers.google.com/pay/api/android/guides/brand-guidelines?hl=en) into `app/platform/android/res`
+4. (optional) If you want to use `Pay with GPay` button, copy [assets](https://developers.google.com/pay/api/download-assets/android/Google-Pay-Payment-Buttons.zip) from [brand guideline page](https://developers.google.com/pay/api/android/guides/brand-guidelines?hl=en) into `app/platform/android/res`
 
 
 ## Methods
 
-- `createGooglePayButton`(options) - returns `Ti.UI.View`  with button inside
+- `createGooglePayButton`(options) - returns `Ti.UI.View` with GooglePay inside.
     - options - any `Ti.UI.View` properties
+
+        options.layout: `googlepay_button`, `pay_with_googlepay_button`
 
 - `createPaymentsClient`(options, callback) - returns
 `paymentClient`
     - options
 
-        enviorment: `ENVIRONMENT_TEST`, `ENVIRONMENT_PROD`
+        options.enviorment: `ENVIRONMENT_TEST`, `ENVIRONMENT_PROD`
 
-        enviorment: `THEME_LIGHT`, `THEME_DARK`
+        options.theme: `THEME_LIGHT`, `THEME_DARK`
 
     ```js
     const googlepay = require('ti.googlepay');
