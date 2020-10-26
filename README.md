@@ -14,17 +14,22 @@ Axway Titanium Hyperloop module for GooglePay
         implementation 'com.google.android.gms:play-services-wallet:18.0.0'
     }
     ```
-4. (optional) If you want to use `Pay with GPay` button, copy [assets](https://developers.google.com/pay/api/download-assets/android/Google-Pay-Payment-Buttons.zip) from [brand guideline page](https://developers.google.com/pay/api/android/guides/brand-guidelines?hl=en) into `app/platform/android/res`
+4. Enable wallet in `tiapp.xml`
+    ```xml
+    <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />
+
+    ```
+5. (optional) If you want to use `Pay with GPay` button, copy [assets](https://developers.google.com/pay/api/download-assets/android/Google-Pay-Payment-Buttons.zip) from [brand guideline page](https://developers.google.com/pay/api/android/guides/brand-guidelines?hl=en) into `app/platform/android/res`
 
 
 ## Methods
 
-- `createGooglePayButton`(options) - returns `Ti.UI.View` with GooglePay inside.
+- **createGooglePayButton**(options) - returns `Ti.UI.View` with GPay button inside.
     - options - any `Ti.UI.View` properties
 
         options.layout: `googlepay_button`, `pay_with_googlepay_button`
 
-- `createPaymentsClient`(options, callback) - returns
+- **createPaymentsClient**(options, callback) - returns
 `paymentClient`
     - options
 
@@ -42,7 +47,7 @@ Axway Titanium Hyperloop module for GooglePay
     ```
 
 `paymentClient` methods:
-- `isReadyToPay`(options, callback)
+- **isReadyToPay**(options, callback)
 
     - options - [isReadyToPayRequest](https://developers.google.com/pay/api/android/reference/request-objects?hl=ru#IsReadyToPayRequest)
 
@@ -56,7 +61,7 @@ Axway Titanium Hyperloop module for GooglePay
     });
     ```
 
-- `makePayment`(options, callback)
+- **makePayment**(options, callback)
     
     - options - [paymentDataRequest](https://developers.google.com/pay/api/android/reference/request-objects?hl=ru#PaymentDataRequest)
 
